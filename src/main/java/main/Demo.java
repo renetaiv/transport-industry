@@ -36,13 +36,13 @@ public class Demo {
         mazda.displayVehicleKind();
         cruiseShip.displayVehicleKind();
 
-        TransportIndustry transportIndustry = new TransportIndustry();
-        transportIndustry.addVehicle(mazda);
-        transportIndustry.addVehicle(hybridCar);
-        transportIndustry.addVehicle(airbus);
+        TransportCompany transportCompany = new TransportCompany();
+        transportCompany.addVehicle(mazda);
+        transportCompany.addVehicle(hybridCar);
+        transportCompany.addVehicle(airbus);
 
-        System.out.println("-------- Displaying vehicles per category --------");
-        transportIndustry.displayVehiclesMap();
+        System.out.println("-------- Displaying vehicles by category --------");
+        transportCompany.displayVehiclesMap();
 
         System.out.println("--------- Displaying different vehicles ----------");
         System.out.println(mazda);

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class TransportIndustry {
+public class TransportCompany {
 
     private Map<String, ArrayList<Vehicle>> vehiclesMap;
 
-    public TransportIndustry() {
+    public TransportCompany() {
         this.vehiclesMap = new TreeMap<>((v1, v2) -> v1.compareTo(v2));
     }
 

@@ -1,7 +1,7 @@
 package main.filesOperations;
 
 import main.ColorType;
-import main.TransportIndustry;
+import main.TransportCompany;
 import main.Vehicle;
 import main.planes.Airliner;
 import main.trains.PassengerTrain;
@@ -16,15 +16,15 @@ public class DemoReaderAndWriter {
     public static void main(String[] args) {
         File file = new File("vehicles_names.txt");
 
-        TransportIndustry transportIndustry = new TransportIndustry();
-        transportIndustry.addVehicle(new PassengerTrain(PassengerTrain.ModelType.INDIAN_PACIFIC, ColorType.BLUE,
+        TransportCompany transportCompany = new TransportCompany();
+        transportCompany.addVehicle(new PassengerTrain(PassengerTrain.ModelType.INDIAN_PACIFIC, ColorType.BLUE,
                 200));
-        transportIndustry.addVehicle(new Airliner(Airliner.ModelType.EMBRAER_LINEAGE_1000E, ColorType.WHITE,
+        transportCompany.addVehicle(new Airliner(Airliner.ModelType.EMBRAER_LINEAGE_1000E, ColorType.WHITE,
                 500));
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
             List<String> text = new ArrayList<>();
-            for (Map.Entry<String, ArrayList<Vehicle>> stringArrayListEntry : transportIndustry.getVehiclesMap().entrySet()) {
+            for (Map.Entry<String, ArrayList<Vehicle>> stringArrayListEntry : transportCompany.getVehiclesMap().entrySet()) {
                 for (Vehicle vehicle : stringArrayListEntry.getValue()) {
                     text.add(vehicle.getName() + '\n');
                 }
