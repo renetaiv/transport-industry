@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.10" class="java.beans.XMLDecoder">
+ <string>Airliner{name=&apos;AIRBUS_A310_LUFTHANSA&apos;, color=&apos;WHITE&apos;, passengers=[]&apos;, maxCapacity=500}</string>
+ <string>InternalCombustionCar{name=&apos;BMW_318&apos;, color=&apos;BLACK&apos;, engine=&apos;DIESEL&apos;}</string>
+ <string>PassengerTrain{name=&apos;EASTERN_ORIENTAL_EXPRESS&apos;, color=&apos;BLACK&apos;, passengers=[]&apos;, maxCapacity=130}</string>
+</java>
