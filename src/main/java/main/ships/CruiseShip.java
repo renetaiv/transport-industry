@@ -28,18 +28,6 @@ public class CruiseShip extends Vehicle {
         }
     }
 
-    public void addPassenger(Person person) {
-        if (this.passengers.size() < maxCapacity) {
-            this.passengers.add(person);
-        }
-    }
-
-    public void showPassengers() {
-        for (Person passenger : this.passengers) {
-            System.out.println(passenger);
-        }
-    }
-
     @Override
     protected String vehicleKind() {
         return MARINE;

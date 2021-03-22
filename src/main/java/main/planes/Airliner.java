@@ -28,16 +28,6 @@ public class Airliner extends Vehicle {
         }
     }
 
-    public void addPassenger(Person person) {
-        if (this.passengers.size() < maxCapacity) {
-            this.passengers.add(person);
-        }
-    }
-
-    public void showPassengers() {
-        this.passengers.stream().forEach(person -> System.out.println(person));
-    }
-
     @Override
     public String vehicleKind() {
         return AIRILY;
