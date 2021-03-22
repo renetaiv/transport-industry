@@ -1,6 +1,6 @@
 package main;
 
-import main.domainModel.AirportParking;
+import main.domainModel.VehicleParking;
 import main.domainModel.Person;
 import main.domainModel.TransportCompany;
 import main.domainModel.Vehicle;
@@ -66,7 +66,7 @@ public class Demo {
         System.out.println(boeing);
         System.out.println(airbus);
 
-        AirportParking parking = new AirportParking();
+        VehicleParking parking = new VehicleParking();
         parking.addVehicleToParking(airbus, 8);
         parking.addVehicleToParking(mazda, 15);
         parking.addVehicleToParking(hybridCar, 3);

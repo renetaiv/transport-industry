@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class AirportParking {
+public class VehicleParking {
 
     private final static int PRICE_PER_HOUR_FOR_CAR = 5;
     private final static int PRICE_PER_HOUR_FOR_PLANE = 19;
@@ -21,7 +21,7 @@ public class AirportParking {
     private Map<Vehicle, Integer> reservedHoursForVehicle;
     private int income;
 
-    public AirportParking() {
+    public VehicleParking() {
         this.parkingCells = new HashMap<>();
         this.reservedHoursForVehicle = new HashMap<>();
         this.parkingCells.put(Vehicle.AIRILY, new HashSet<>());
