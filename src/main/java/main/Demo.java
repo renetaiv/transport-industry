@@ -17,19 +17,19 @@ public class Demo {
         Vehicle boeing = new CargoPlane(CargoPlane.ModelType.BOEING_747_DREAMLIFTER, ColorType.GREY, 200);
         Vehicle airbus = new Airliner(Airliner.ModelType.AIRBUS_A310_LUFTHANSA, ColorType.WHITE, 750);
 
-        ((Airliner) airbus).addPassenger(new Person("Petar Georgiev", 22, 'M'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Petar Georgiev", 22, true), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
-        ((Airliner) airbus).addPassenger(new Person("Mariela Ivanova", 25, 'F'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Mariela Ivanova", 25, false), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
-        ((Airliner) airbus).addPassenger(new Person("Mario Petkov", 30, 'M'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Mario Petkov", 30, true), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
-        ((Airliner) airbus).addPassenger(new Person("Ivan Krustev", 21, 'M'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Ivan Krustev", 21, true), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
-        ((Airliner) airbus).addPassenger(new Person("Georgi Taushanov", 48, 'M'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Georgi Taushanov", 48, true), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
-        ((Airliner) airbus).addPassenger(new Person("Kiril Angelkov", 50, 'M'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Kiril Angelkov", 50, true), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
-        ((Airliner) airbus).addPassenger(new Person("Iveta Kostova", 38, 'F'), ((Airliner) airbus).getPassengers(),
+        ((Airliner) airbus).addPassenger(new Person("Iveta Kostova", 38, false), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
 
         System.out.println("------------ Passengers on airliner --------------");

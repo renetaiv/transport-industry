@@ -6,9 +6,9 @@ public class Person {
 
     private String name;
     private int age;
-    private char gender;
+    private boolean isMale;
 
-    public Person(String name, int age, char gender) {
+    public Person(String name, int age, boolean isMale) {
         if (Validator.validatorCheck(name)) {
             this.name = name;
         } else {
@@ -19,11 +19,7 @@ public class Person {
         } else {
             throw new IllegalArgumentException("Not valid age input!");
         }
-        if (gender == 'M' || gender == 'm' || gender == 'F' || gender == 'f') {
-            this.gender = gender;
-        } else {
-            throw new IllegalArgumentException("Not valid gender input!");
-        }
+        this.isMale = isMale;
     }
 
     public String getName() {
@@ -35,7 +31,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", gender=" + gender +
+                ", isMale=" + isMale +
                 '}';
     }
 }
