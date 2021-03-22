@@ -35,7 +35,7 @@ public class Demo {
         ((Airliner) airbus).addPassenger(new Person("Iveta Kostova", 38, false), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());
 
-        System.out.println("------------ Passengers on airliner --------------");
+        System.out.println("----- Passengers on airliner sorted by name ------");
         ((Airliner) airbus).showPassengers(((Airliner) airbus).getPassengers());
 
         System.out.println("------ Passengers on airline sorted by age -------");
