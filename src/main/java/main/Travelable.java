@@ -4,9 +4,12 @@ import java.util.Set;
 
 public interface Travelable {
 
-    default void addPassenger(Person person, Set<Person> passengers, int maxCapacity){
+    default boolean addPassenger(Person person, Set<Person> passengers, int maxCapacity){
         if (passengers.size() < maxCapacity) {
             passengers.add(person);
+            return true;
+        } else {
+            return false;
         }
     }
 
