@@ -37,14 +37,6 @@ public class Airliner extends Vehicle implements Travelable {
         return passengers;
     }
 
-    public void showSortedPassengersByAge() {
-        Set<Person> sortedByAge = new TreeSet<>(Comparator.comparingInt(Person::getAge));
-        sortedByAge.addAll(passengers);
-        for (Person person : sortedByAge) {
-            System.out.println(person);
-        }
-    }
-
     @Override
     public String vehicleKind() {
         return AIRILY;

@@ -2,7 +2,9 @@ package main;
 
 import main.domainModel.Person;
 
+import java.util.Comparator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public interface Travelable {
 
@@ -18,6 +20,14 @@ public interface Travelable {
     default void showPassengers(Set<Person> passengers) {
         for (Person passenger : passengers) {
             System.out.println(passenger);
+        }
+    }
+
+    default void showSortedPassengersByAge(Set<Person> passengers) {
+        Set<Person> sortedByAge = new TreeSet<>(Comparator.comparingInt(Person::getAge));
+        sortedByAge.addAll(passengers);
+        for (Person person : sortedByAge) {
+            System.out.println(person);
         }
     }
 }
