@@ -38,6 +38,9 @@ public class Demo {
         System.out.println("------------ Passengers on airliner --------------");
         ((Airliner) airbus).showPassengers(((Airliner) airbus).getPassengers());
 
+        System.out.println("------ Passengers on airline sorted by age -------");
+        ((Airliner) airbus).showSortedPassengersByAge();
+
         System.out.println("------------ Displaying level of environmental friendliness ---------------");
         ((InternalCombustionCar) mazda).displayEnvironmentalFriendliness();
         ((HybridCar) hybridCar).displayEnvironmentalFriendliness();
