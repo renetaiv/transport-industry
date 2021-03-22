@@ -10,6 +10,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class DemoReaderAndWriter {
 
@@ -24,7 +25,7 @@ public class DemoReaderAndWriter {
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
             List<String> text = new ArrayList<>();
-            for (Map.Entry<String, ArrayList<Vehicle>> stringArrayListEntry : transportCompany.getVehiclesMap().entrySet()) {
+            for (Map.Entry<String, Set<Vehicle>> stringArrayListEntry : transportCompany.getVehiclesMap().entrySet()) {
                 for (Vehicle vehicle : stringArrayListEntry.getValue()) {
                     text.add(vehicle.getName() + '\n');
                 }

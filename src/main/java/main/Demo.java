@@ -50,6 +50,7 @@ public class Demo {
         transportCompany.addVehicle(mazda);
         transportCompany.addVehicle(hybridCar);
         transportCompany.addVehicle(airbus);
+        transportCompany.addVehicle(passengerTrain);
 
         System.out.println("-------- Displaying vehicles by category --------");
         transportCompany.displayVehiclesMap();

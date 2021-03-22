@@ -1,30 +1,27 @@
 package main.domainModel;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class TransportCompany {
 
-    private Map<String, ArrayList<Vehicle>> vehiclesMap;
+    private Map<String, Set<Vehicle>> vehiclesMap;
 
     public TransportCompany() {
-        this.vehiclesMap = new TreeMap<>((v1, v2) -> v1.compareTo(v2));
+        this.vehiclesMap = new TreeMap<>(Comparator.naturalOrder());
     }
 
-    public Map<String, ArrayList<Vehicle>> getVehiclesMap() {
+    public Map<String, Set<Vehicle>> getVehiclesMap() {
         return vehiclesMap;
     }
 
     public void addVehicle(Vehicle vehicle) {
-        if (!this.vehiclesMap.containsKey(vehicle.vehicleKind())) {
-            this.vehiclesMap.put(vehicle.vehicleKind(), new ArrayList<>());
-        }
-        this.vehiclesMap.get(vehicle.vehicleKind()).add(vehicle);
+        this.vehiclesMap
+                .computeIfAbsent(vehicle.vehicleKind(), set -> new HashSet<>())
+                .add(vehicle);
     }
 
     public void displayVehiclesMap() {
-        for (Map.Entry<String, ArrayList<Vehicle>> vehicles : this.vehiclesMap.entrySet()) {
+        for (Map.Entry<String, Set<Vehicle>> vehicles : this.vehiclesMap.entrySet()) {
             System.out.println(vehicles.getKey() + ":");
             for (Vehicle vehicle : vehicles.getValue()) {
                 System.out.println(vehicle.getName());
