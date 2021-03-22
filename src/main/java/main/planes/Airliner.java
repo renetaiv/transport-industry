@@ -5,6 +5,7 @@ import main.Person;
 import main.Vehicle;
 import main.util.Validator;
 
+import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -19,7 +20,7 @@ public class Airliner extends Vehicle {
 
     public Airliner(ModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);
-        this.passengers = new TreeSet<>((p1, p2) -> p1.getName().compareTo(p2.getName()));
+        this.passengers = new TreeSet<>(Comparator.comparing(Person::getName));
         if (Validator.isValidNumber(1, 800, maxCapacity)) {
             this.maxCapacity = maxCapacity;
         } else {
