@@ -4,9 +4,9 @@ import main.util.Validator;
 
 public class Person {
 
-    private String name;
+    private final String name;
     private int age;
-    private boolean isMale;
+    private final boolean isMale;
 
     public Person(String name, int age, boolean isMale) {
         if (Validator.validatorCheck(name)) {
