@@ -22,3 +22,6 @@
 
 target/
 .idea/
+vehicles.json
+vehicles.xml
+vehicles_names.txt
