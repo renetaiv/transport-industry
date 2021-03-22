@@ -12,14 +12,14 @@ import java.util.TreeSet;
 
 public class PassengerTrain extends Vehicle implements Travelable {
 
-    public enum ModelType {
+    public enum PassengerTrainModelType {
         INDIAN_PACIFIC, EASTERN_ORIENTAL_EXPRESS
     }
 
     private Set<Person> passengers;
     private final int maxCapacity;
 
-    public PassengerTrain(ModelType name, ColorType color, int maxCapacity) {
+    public PassengerTrain(PassengerTrainModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);
         this.passengers = new TreeSet<>(Comparator.comparing(Person::getName));
         if (Validator.isValidNumber(1, 500, maxCapacity)) {

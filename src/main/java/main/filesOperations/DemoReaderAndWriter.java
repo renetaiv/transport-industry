@@ -18,9 +18,9 @@ public class DemoReaderAndWriter {
         File file = new File("vehicles_names.txt");
 
         TransportCompany transportCompany = new TransportCompany();
-        transportCompany.addVehicle(new PassengerTrain(PassengerTrain.ModelType.INDIAN_PACIFIC, ColorType.BLUE,
+        transportCompany.addVehicle(new PassengerTrain(PassengerTrain.PassengerTrainModelType.INDIAN_PACIFIC, ColorType.BLUE,
                 200));
-        transportCompany.addVehicle(new Airliner(Airliner.ModelType.EMBRAER_LINEAGE_1000E, ColorType.WHITE,
+        transportCompany.addVehicle(new Airliner(Airliner.AirlinerModelType.EMBRAER_LINEAGE_1000E, ColorType.WHITE,
                 500));
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {

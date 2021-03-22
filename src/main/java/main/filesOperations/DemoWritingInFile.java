@@ -18,11 +18,11 @@ import java.util.Random;
 public class DemoWritingInFile {
 
     public static void main(String[] args) {
-        Airliner airliner = new Airliner(Airliner.ModelType.AIRBUS_A310_LUFTHANSA, ColorType.WHITE, 500);
-        InternalCombustionCar internalCombustionCar = new InternalCombustionCar(InternalCombustionCar.ModelType.BMW_318,
+        Airliner airliner = new Airliner(Airliner.AirlinerModelType.AIRBUS_A310_LUFTHANSA, ColorType.WHITE, 500);
+        InternalCombustionCar internalCombustionCar = new InternalCombustionCar(InternalCombustionCar.InternalCombustionCarModelType.BMW_318,
                 ColorType.BLACK, InternalCombustionCar.EngineType.DIESEL);
 
-        PassengerTrain.ModelType[] trainModels = PassengerTrain.ModelType.values();
+        PassengerTrain.PassengerTrainModelType[] trainModels = PassengerTrain.PassengerTrainModelType.values();
         ColorType[] colors = ColorType.values();
         //Generate train with random parameters
         Vehicle train = new PassengerTrain(trainModels[new Random().nextInt(trainModels.length)],

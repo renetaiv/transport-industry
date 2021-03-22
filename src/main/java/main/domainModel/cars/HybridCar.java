@@ -5,7 +5,7 @@ import main.domainModel.Vehicle;
 
 public class HybridCar extends Vehicle {
 
-    public enum ModelType {
+    public enum HybridCarModelType {
         LEXUS_ES_300H, TOYOTA_RAV4, HONDA_NSX, LEXUS_RX_450H_L, HONDA_JAZZ
     }
 
@@ -15,7 +15,7 @@ public class HybridCar extends Vehicle {
 
     private final EngineType engine;
 
-    public HybridCar(ModelType name, ColorType color, EngineType engine) {
+    public HybridCar(HybridCarModelType name, ColorType color, EngineType engine) {
         super(String.valueOf(name), color);
         this.engine = engine;
     }

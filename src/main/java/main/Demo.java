@@ -13,12 +13,12 @@ import main.domainModel.trains.PassengerTrain;
 public class Demo {
 
     public static void main(String[] args) {
-        Vehicle mazda = new InternalCombustionCar(InternalCombustionCar.ModelType.MAZDA_6, ColorType.GREY, InternalCombustionCar.EngineType.BENZINE);
-        Vehicle hybridCar = new HybridCar(HybridCar.ModelType.LEXUS_RX_450H_L, ColorType.BLUE, HybridCar.EngineType.FULL_HYBRID);
-        Vehicle passengerTrain = new PassengerTrain(PassengerTrain.ModelType.INDIAN_PACIFIC, ColorType.BLUE, 200);
-        Vehicle cruiseShip = new CruiseShip(CruiseShip.ModelType.ADVENTURE_OF_THE_SEAS, ColorType.WHITE, 5000);
-        Vehicle boeing = new CargoPlane(CargoPlane.ModelType.BOEING_747_DREAMLIFTER, ColorType.GREY, 200);
-        Vehicle airbus = new Airliner(Airliner.ModelType.AIRBUS_A310_LUFTHANSA, ColorType.WHITE, 750);
+        Vehicle mazda = new InternalCombustionCar(InternalCombustionCar.InternalCombustionCarModelType.MAZDA_6, ColorType.GREY, InternalCombustionCar.EngineType.BENZINE);
+        Vehicle hybridCar = new HybridCar(HybridCar.HybridCarModelType.LEXUS_RX_450H_L, ColorType.BLUE, HybridCar.EngineType.FULL_HYBRID);
+        Vehicle passengerTrain = new PassengerTrain(PassengerTrain.PassengerTrainModelType.INDIAN_PACIFIC, ColorType.BLUE, 200);
+        Vehicle cruiseShip = new CruiseShip(CruiseShip.CruiseShipModelType.ADVENTURE_OF_THE_SEAS, ColorType.WHITE, 5000);
+        Vehicle boeing = new CargoPlane(CargoPlane.CargoPlaneModelType.BOEING_747_DREAMLIFTER, ColorType.GREY, 200);
+        Vehicle airbus = new Airliner(Airliner.AirlinerModelType.AIRBUS_A310_LUFTHANSA, ColorType.WHITE, 750);
 
         ((Airliner) airbus).addPassenger(new Person("Petar Georgiev", 22, true), ((Airliner) airbus).getPassengers(),
                 ((Airliner) airbus).getMaxCapacity());

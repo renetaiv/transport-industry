@@ -12,14 +12,14 @@ import java.util.TreeSet;
 
 public class CruiseShip extends Vehicle implements Travelable {
 
-    public enum ModelType {
+    public enum CruiseShipModelType {
         ADVENTURE_OF_THE_SEAS, ALLURE_OF_THE_SEAS, AMSTERDAM, CARIBBEAN_PRINCESS
     }
 
     private Set<Person> passengers;
     private final int maxCapacity;
 
-    public CruiseShip(ModelType name, ColorType color, int maxCapacity) {
+    public CruiseShip(CruiseShipModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);
         this.passengers = new TreeSet<>(Comparator.comparing(Person::getName));
         if (Validator.isValidNumber(1, 7000, maxCapacity)) {

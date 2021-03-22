@@ -5,7 +5,7 @@ import main.domainModel.Vehicle;
 
 public class InternalCombustionCar extends Vehicle {
 
-    public enum ModelType {
+    public enum InternalCombustionCarModelType {
         MAZDA_6, NISSAN_MICRA_1500, BMW_318, SCODA_OCTAVIA_DSG
     }
 
@@ -15,7 +15,7 @@ public class InternalCombustionCar extends Vehicle {
 
     private final EngineType engine;
 
-    public InternalCombustionCar(ModelType name, ColorType color, EngineType engine) {
+    public InternalCombustionCar(InternalCombustionCarModelType name, ColorType color, EngineType engine) {
         super(String.valueOf(name), color);
         this.engine = engine;
     }

@@ -6,13 +6,13 @@ import main.util.Validator;
 
 public class CargoPlane extends Vehicle {
 
-    public enum ModelType {
+    public enum CargoPlaneModelType {
         ANTONOV_AN_225_MRIYA, BOEING_747_DREAMLIFTER, AERO_SPACELINES_SUPER_GUPPY
     }
 
     private final int maxCargoWeight; // in tons
 
-    public CargoPlane(ModelType name, ColorType color, int maxCargoWeight) {
+    public CargoPlane(CargoPlaneModelType name, ColorType color, int maxCargoWeight) {
         super(String.valueOf(name), color);
         if (Validator.isValidNumber(1, 250, maxCargoWeight)) {
             this.maxCargoWeight = maxCargoWeight;

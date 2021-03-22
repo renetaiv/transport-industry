@@ -12,14 +12,14 @@ import java.util.TreeSet;
 
 public class Airliner extends Vehicle implements Travelable {
 
-    public enum ModelType {
+    public enum AirlinerModelType {
         AMERICAN_AIRLINES_B727_200, EMBRAER_LINEAGE_1000E, AIRBUS_A310_LUFTHANSA
     }
 
     private Set<Person> passengers;
     private final int maxCapacity;
 
-    public Airliner(ModelType name, ColorType color, int maxCapacity) {
+    public Airliner(AirlinerModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);
         this.passengers = new TreeSet<>(Comparator.comparing(Person::getName));
         if (Validator.isValidNumber(1, 800, maxCapacity)) {
