@@ -1,10 +1,10 @@
 package main.filesOperations;
 
 import main.ColorType;
-import main.TransportCompany;
-import main.Vehicle;
-import main.planes.Airliner;
-import main.trains.PassengerTrain;
+import main.domainModel.TransportCompany;
+import main.domainModel.Vehicle;
+import main.domainModel.planes.Airliner;
+import main.domainModel.trains.PassengerTrain;
 
 import java.io.*;
 import java.util.ArrayList;

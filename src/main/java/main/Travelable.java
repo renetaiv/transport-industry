@@ -1,5 +1,7 @@
 package main;
 
+import main.domainModel.Person;
+
 import java.util.Set;
 
 public interface Travelable {

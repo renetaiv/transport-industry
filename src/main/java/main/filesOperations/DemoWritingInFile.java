@@ -3,10 +3,10 @@ package main.filesOperations;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import main.ColorType;
-import main.Vehicle;
-import main.cars.InternalCombustionCar;
-import main.planes.Airliner;
-import main.trains.PassengerTrain;
+import main.domainModel.Vehicle;
+import main.domainModel.cars.InternalCombustionCar;
+import main.domainModel.planes.Airliner;
+import main.domainModel.trains.PassengerTrain;
 import main.util.Randomizer;
 
 import java.beans.XMLEncoder;
