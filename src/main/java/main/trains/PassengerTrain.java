@@ -29,6 +29,14 @@ public class PassengerTrain extends Vehicle implements Travelable {
         }
     }
 
+    public Set<Person> getPassengers() {
+        return passengers;
+    }
+
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
     @Override
     public String vehicleKind() {
         return RAILWAY;

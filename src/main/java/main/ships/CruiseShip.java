@@ -29,6 +29,14 @@ public class CruiseShip extends Vehicle implements Travelable {
         }
     }
 
+    public Set<Person> getPassengers() {
+        return passengers;
+    }
+
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
     @Override
     protected String vehicleKind() {
         return MARINE;

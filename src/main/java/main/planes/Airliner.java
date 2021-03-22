@@ -29,6 +29,14 @@ public class Airliner extends Vehicle implements Travelable {
         }
     }
 
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
+    public Set<Person> getPassengers() {
+        return passengers;
+    }
+
     @Override
     public String vehicleKind() {
         return AIRILY;
