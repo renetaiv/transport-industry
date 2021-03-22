@@ -34,7 +34,7 @@ public class AirportParking {
     }
 
     public int getIncome() {
-        return income;
+        return this.income;
     }
 
     public boolean addVehicleToParking(Vehicle vehicle, int hours) {
@@ -74,6 +74,16 @@ public class AirportParking {
         }
     }
 
+    public void showVehiclesAtParking() {
+        for (Map.Entry<String, Set<Vehicle>> vehicles : this.parkingCells.entrySet()) {
+            System.out.println(vehicles.getKey() + ":");
+            for (Vehicle vehicle : vehicles.getValue()) {
+                System.out.println(vehicle.getName());
+            }
+            System.out.println("-----------------------------");
+        }
+    }
+
     private void payForParking(Vehicle vehicle) {
         switch (vehicle.vehicleKind()) {
             case "Airily":
@@ -92,9 +102,13 @@ public class AirportParking {
     }
 
     public void freeReservedCell(Vehicle vehicle) {
-        payForParking(vehicle);
-        this.reservedHoursForVehicle.remove(vehicle);
-        this.parkingCells.get(vehicle.vehicleKind()).remove(vehicle);
-        System.out.println(vehicle.getName() + " has vacated its parking space.");
+        if(parkingCells.get(vehicle.vehicleKind()).contains(vehicle)) {
+            payForParking(vehicle);
+            this.reservedHoursForVehicle.remove(vehicle);
+            this.parkingCells.get(vehicle.vehicleKind()).remove(vehicle);
+            System.out.println(vehicle.getName() + " has vacated its parking space.");
+        } else {
+            System.out.println(vehicle.getName() + " is not part of the parking lot.");
+        }
     }
 }

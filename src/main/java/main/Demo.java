@@ -1,5 +1,6 @@
 package main;
 
+import main.domainModel.AirportParking;
 import main.domainModel.Person;
 import main.domainModel.TransportCompany;
 import main.domainModel.Vehicle;
@@ -65,5 +66,25 @@ public class Demo {
         System.out.println(boeing);
         System.out.println(airbus);
 
+        AirportParking parking = new AirportParking();
+        parking.addVehicleToParking(airbus, 8);
+        parking.addVehicleToParking(mazda, 15);
+        parking.addVehicleToParking(hybridCar, 3);
+        parking.addVehicleToParking(cruiseShip, 30);
+
+        System.out.println("------------- Show parking vehicles --------------");
+        parking.showVehiclesAtParking();
+
+        System.out.println("-------- Show leaving cars from the parking --------");
+        parking.freeReservedCell(airbus);
+        //parking.freeReservedCell(passengerTrain);
+        parking.freeReservedCell(mazda);
+        parking.freeReservedCell(cruiseShip);
+
+        System.out.println("-------------- Show parking's income ---------------");
+        System.out.println(parking.getIncome() + " BGN");
+
+        System.out.println("---- Show the other vehicles in the parking lot ----");
+        parking.showVehiclesAtParking();
     }
 }
