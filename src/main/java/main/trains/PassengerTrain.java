@@ -2,6 +2,7 @@ package main.trains;
 
 import main.ColorType;
 import main.Person;
+import main.Travelable;
 import main.Vehicle;
 import main.util.Validator;
 
@@ -9,7 +10,7 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class PassengerTrain extends Vehicle {
+public class PassengerTrain extends Vehicle implements Travelable {
 
     public enum ModelType {
         INDIAN_PACIFIC, EASTERN_ORIENTAL_EXPRESS

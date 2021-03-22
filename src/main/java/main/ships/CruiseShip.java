@@ -2,6 +2,7 @@ package main.ships;
 
 import main.ColorType;
 import main.Person;
+import main.Travelable;
 import main.Vehicle;
 import main.util.Validator;
 
@@ -9,7 +10,7 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class CruiseShip extends Vehicle {
+public class CruiseShip extends Vehicle implements Travelable {
 
     public enum ModelType {
         ADVENTURE_OF_THE_SEAS, ALLURE_OF_THE_SEAS, AMSTERDAM, CARIBBEAN_PRINCESS

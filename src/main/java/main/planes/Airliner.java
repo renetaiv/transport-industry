@@ -2,6 +2,7 @@ package main.planes;
 
 import main.ColorType;
 import main.Person;
+import main.Travelable;
 import main.Vehicle;
 import main.util.Validator;
 
@@ -9,7 +10,7 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Airliner extends Vehicle {
+public class Airliner extends Vehicle implements Travelable {
 
     public enum ModelType {
         AMERICAN_AIRLINES_B727_200, EMBRAER_LINEAGE_1000E, AIRBUS_A310_LUFTHANSA
