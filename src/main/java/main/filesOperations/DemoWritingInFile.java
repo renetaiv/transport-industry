@@ -7,7 +7,6 @@ import main.domainModel.Vehicle;
 import main.domainModel.cars.InternalCombustionCar;
 import main.domainModel.planes.Airliner;
 import main.domainModel.trains.PassengerTrain;
-import main.util.Randomizer;
 
 import java.beans.XMLEncoder;
 import java.io.BufferedOutputStream;
@@ -27,7 +26,7 @@ public class DemoWritingInFile {
         ColorType[] colors = ColorType.values();
         //Generate train with random parameters
         Vehicle train = new PassengerTrain(trainModels[new Random().nextInt(trainModels.length)],
-                colors[new Random().nextInt(colors.length)], Randomizer.getRandomNumber(1, 500));
+                colors[new Random().nextInt(colors.length)], (int) (Math.random() * 500) + 1);
 
         //xml
         try (FileOutputStream fileOutputStream = new FileOutputStream("vehicles.xml")) {
