@@ -1,10 +1,10 @@
 package main;
 
-import main.domainModel.cars.HybridCar;
-import main.domainModel.cars.InternalCombustionCar;
 import main.domainModel.Person;
 import main.domainModel.TransportCompany;
 import main.domainModel.Vehicle;
+import main.domainModel.cars.HybridCar;
+import main.domainModel.cars.InternalCombustionCar;
 import main.domainModel.planes.Airliner;
 import main.domainModel.planes.CargoPlane;
 import main.domainModel.ships.CruiseShip;
