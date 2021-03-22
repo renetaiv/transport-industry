@@ -1,8 +1,5 @@
 package main.domainModel;
 
-import main.domainModel.cars.HybridCar;
-import main.domainModel.ships.CruiseShip;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -16,9 +13,9 @@ public class AirportParking {
     private final static int PRICE_PER_HOUR_FOR_SHIP = 19;
 
     private final static int CELLS_FOR_CARS = 200;
-    private final static int CELLS_FOR_PLANE = 100;
-    private final static int CELLS_FOR_TRAIN = 20;
-    private final static int CELLS_FOR_SHIP = 50;
+    private final static int CELLS_FOR_PLANES = 100;
+    private final static int CELLS_FOR_TRAINS = 20;
+    private final static int CELLS_FOR_SHIPS = 50;
 
     private Map<String, Set<Vehicle>> parkingCells;
     private Map<Vehicle, Integer> reservedHoursForVehicle;
@@ -41,19 +38,19 @@ public class AirportParking {
         boolean haveFreeCell = false;
         switch (vehicle.vehicleKind()) {
             case "Airily":
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_PLANE) {
+                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_PLANES) {
                     this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
                     haveFreeCell = true;
                 }
                 break;
             case "Marine":
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_SHIP) {
+                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_SHIPS) {
                     this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
                     haveFreeCell = true;
                 }
                 break;
             case "Railway":
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_TRAIN) {
+                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_TRAINS) {
                     this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
                     haveFreeCell = true;
                 }
