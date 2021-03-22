@@ -17,7 +17,7 @@ public class CruiseShip extends Vehicle implements Travelable {
     }
 
     private Set<Person> passengers;
-    private int maxCapacity;
+    private final int maxCapacity;
 
     public CruiseShip(ModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);

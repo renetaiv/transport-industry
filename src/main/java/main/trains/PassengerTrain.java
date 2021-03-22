@@ -17,7 +17,7 @@ public class PassengerTrain extends Vehicle implements Travelable {
     }
 
     private Set<Person> passengers;
-    private int maxCapacity;
+    private final int maxCapacity;
 
     public PassengerTrain(ModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);

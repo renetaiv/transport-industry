@@ -13,7 +13,7 @@ abstract public class Vehicle {
     private ColorType color;
 
     public Vehicle(String name, ColorType color) {
-        if (Validator.isValidText(name)) {
+        if (Validator.validatorCheck(name)) {
             this.name = name;
         }
         this.color = color;

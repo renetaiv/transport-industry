@@ -9,7 +9,7 @@ public class Person {
     private char gender;
 
     public Person(String name, int age, char gender) {
-        if (Validator.isValidText(name)) {
+        if (Validator.validatorCheck(name)) {
             this.name = name;
         } else {
             throw new IllegalArgumentException("Not valid name input!");

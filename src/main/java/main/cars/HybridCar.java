@@ -13,7 +13,7 @@ public class HybridCar extends Vehicle {
         FULL_HYBRID, LIGHT_HYBRID
     }
 
-    private EngineType engine;
+    private final EngineType engine;
 
     public HybridCar(ModelType name, ColorType color, EngineType engine) {
         super(String.valueOf(name), color);

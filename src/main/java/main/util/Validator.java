@@ -2,8 +2,8 @@ package main.util;
 
 public class Validator {
 
-    public static boolean isValidText(String text) {
-        return text.length() > 0 && !text.equals(" ");
+    public static boolean validatorCheck(String text) {
+        return !text.equals("") && text.length() > 0;
     }
 
     public static boolean isValidNumber(int min, int max, int num) {

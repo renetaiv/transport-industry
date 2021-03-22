@@ -13,7 +13,7 @@ public class InternalCombustionCar extends Vehicle {
         DIESEL, BENZINE
     }
 
-    private EngineType engine;
+    private final EngineType engine;
 
     public InternalCombustionCar(ModelType name, ColorType color, EngineType engine) {
         super(String.valueOf(name), color);

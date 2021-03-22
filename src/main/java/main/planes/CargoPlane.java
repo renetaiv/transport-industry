@@ -10,7 +10,7 @@ public class CargoPlane extends Vehicle {
         ANTONOV_AN_225_MRIYA, BOEING_747_DREAMLIFTER, AERO_SPACELINES_SUPER_GUPPY
     }
 
-    private int maxCargoWeight; // in tons
+    private final int maxCargoWeight; // in tons
 
     public CargoPlane(ModelType name, ColorType color, int maxCargoWeight) {
         super(String.valueOf(name), color);

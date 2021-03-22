@@ -10,7 +10,7 @@ public class SailingShip extends Vehicle {
         ROYAL_CLIPPER_ITINERARY, SANTA_MARIA, FLYING_CLOUD
     }
 
-    private int numberOfMasts;
+    private final int numberOfMasts;
 
     public SailingShip(ModelType name, ColorType color, int numberOfMasts) {
         super(String.valueOf(name), color);
