@@ -22,6 +22,8 @@ abstract public class Vehicle {
 
     protected abstract String vehicleKind();
 
+    public abstract int getVehiclePricePerHour();
+
     public void displayVehicleKind() {
         System.out.println(this.name + ": " + vehicleKind());
     }

@@ -30,6 +30,11 @@ public class InternalCombustionCar extends Vehicle {
     }
 
     @Override
+    public int getVehiclePricePerHour() {
+        return 5;
+    }
+
+    @Override
     public String toString() {
         return "InternalCombustionCar{" +
                 "name='" + super.getName() + '\'' +

@@ -7,11 +7,6 @@ import java.util.Set;
 
 public class VehicleParking {
 
-    private final static int PRICE_PER_HOUR_FOR_CAR = 5;
-    private final static int PRICE_PER_HOUR_FOR_PLANE = 19;
-    private final static int PRICE_PER_HOUR_FOR_TRAIN = 12;
-    private final static int PRICE_PER_HOUR_FOR_SHIP = 19;
-
     private final static int CELLS_FOR_CARS = 200;
     private final static int CELLS_FOR_PLANES = 100;
     private final static int CELLS_FOR_TRAINS = 20;
@@ -82,24 +77,11 @@ public class VehicleParking {
     }
 
     private void payForParking(Vehicle vehicle) {
-        switch (vehicle.vehicleKind()) {
-            case "Airily":
-                this.income += this.reservedHoursForVehicle.get(vehicle) * PRICE_PER_HOUR_FOR_PLANE;
-                break;
-            case "Marine":
-                this.income += this.reservedHoursForVehicle.get(vehicle) * PRICE_PER_HOUR_FOR_SHIP;
-                break;
-            case "Railway":
-                this.income += this.reservedHoursForVehicle.get(vehicle) * PRICE_PER_HOUR_FOR_TRAIN;
-                break;
-            default:
-                this.income += this.reservedHoursForVehicle.get(vehicle) * PRICE_PER_HOUR_FOR_CAR;
-                break;
-        }
+        this.income += this.reservedHoursForVehicle.get(vehicle) * vehicle.getVehiclePricePerHour();
     }
 
     public void freeReservedCell(Vehicle vehicle) {
-        if(parkingCells.get(vehicle.vehicleKind()).contains(vehicle)) {
+        if (parkingCells.get(vehicle.vehicleKind()).contains(vehicle)) {
             payForParking(vehicle);
             this.reservedHoursForVehicle.remove(vehicle);
             this.parkingCells.get(vehicle.vehicleKind()).remove(vehicle);

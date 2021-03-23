@@ -43,6 +43,11 @@ public class Airliner extends Vehicle implements Travelable {
     }
 
     @Override
+    public int getVehiclePricePerHour() {
+        return 19;
+    }
+
+    @Override
     public String toString() {
         return "Airliner{" +
                 "name='" + super.getName() + '\'' +

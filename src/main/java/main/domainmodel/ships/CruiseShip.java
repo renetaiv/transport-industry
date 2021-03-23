@@ -43,6 +43,11 @@ public class CruiseShip extends Vehicle implements Travelable {
     }
 
     @Override
+    public int getVehiclePricePerHour() {
+        return 24;
+    }
+
+    @Override
     public String toString() {
         return "CruiseShip{" +
                 "name='" + super.getName() + '\'' +

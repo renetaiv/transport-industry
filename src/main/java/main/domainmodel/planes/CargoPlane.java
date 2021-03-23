@@ -27,6 +27,11 @@ public class CargoPlane extends Vehicle {
     }
 
     @Override
+    public int getVehiclePricePerHour() {
+        return 19;
+    }
+
+    @Override
     public String toString() {
         return "CargoPlane{" +
                 "name='" + super.getName() + '\'' +

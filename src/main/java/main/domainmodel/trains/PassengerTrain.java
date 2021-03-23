@@ -43,6 +43,11 @@ public class PassengerTrain extends Vehicle implements Travelable {
     }
 
     @Override
+    public int getVehiclePricePerHour() {
+        return 12;
+    }
+
+    @Override
     public String toString() {
         return "PassengerTrain{" +
                 "name='" + super.getName() + '\'' +
