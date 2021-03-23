@@ -1,4 +1,4 @@
-package main.domainModel;
+package main.domainmodel;
 
 import java.util.HashMap;
 import java.util.HashSet;

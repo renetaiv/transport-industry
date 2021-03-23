@@ -1,4 +1,4 @@
-package main.filesOperations;
+package main.filesoperations;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

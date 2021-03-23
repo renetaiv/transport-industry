@@ -1,6 +1,6 @@
 package main;
 
-import main.domainModel.Person;
+import main.domainmodel.Person;
 
 import java.util.Comparator;
 import java.util.Set;

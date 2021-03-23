@@ -1,50 +1,50 @@
-package main.domainModel.planes;
+package main.domainmodel.trains;
 
 import main.ColorType;
-import main.domainModel.Person;
+import main.domainmodel.Person;
 import main.Travelable;
-import main.domainModel.Vehicle;
+import main.domainmodel.Vehicle;
 import main.util.Validator;
 
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Airliner extends Vehicle implements Travelable {
+public class PassengerTrain extends Vehicle implements Travelable {
 
-    public enum AirlinerModelType {
-        AMERICAN_AIRLINES_B727_200, EMBRAER_LINEAGE_1000E, AIRBUS_A310_LUFTHANSA
+    public enum PassengerTrainModelType {
+        INDIAN_PACIFIC, EASTERN_ORIENTAL_EXPRESS
     }
 
     private Set<Person> passengers;
     private final int maxCapacity;
 
-    public Airliner(AirlinerModelType name, ColorType color, int maxCapacity) {
+    public PassengerTrain(PassengerTrainModelType name, ColorType color, int maxCapacity) {
         super(String.valueOf(name), color);
         this.passengers = new TreeSet<>(Comparator.comparing(Person::getName));
-        if (Validator.isValidNumber(1, 800, maxCapacity)) {
+        if (Validator.isValidNumber(1, 500, maxCapacity)) {
             this.maxCapacity = maxCapacity;
         } else {
             throw new IllegalArgumentException("Too large number of max capacity!");
         }
     }
 
-    public int getMaxCapacity() {
-        return maxCapacity;
-    }
-
     public Set<Person> getPassengers() {
         return passengers;
     }
 
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
     @Override
     public String vehicleKind() {
-        return AIRILY;
+        return RAILWAY;
     }
 
     @Override
     public String toString() {
-        return "Airliner{" +
+        return "PassengerTrain{" +
                 "name='" + super.getName() + '\'' +
                 ", color='" + super.getColor() + '\'' +
                 ", passengers=" + passengers + '\'' +

@@ -1,7 +1,7 @@
-package main.domainModel.cars;
+package main.domainmodel.cars;
 
 import main.ColorType;
-import main.domainModel.Vehicle;
+import main.domainmodel.Vehicle;
 
 public class HybridCar extends Vehicle {
 

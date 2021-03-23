@@ -1,10 +1,10 @@
-package main.filesOperations;
+package main.filesoperations;
 
 import main.ColorType;
-import main.domainModel.TransportCompany;
-import main.domainModel.Vehicle;
-import main.domainModel.planes.Airliner;
-import main.domainModel.trains.PassengerTrain;
+import main.domainmodel.TransportCompany;
+import main.domainmodel.Vehicle;
+import main.domainmodel.planes.Airliner;
+import main.domainmodel.trains.PassengerTrain;
 
 import java.io.*;
 import java.util.ArrayList;

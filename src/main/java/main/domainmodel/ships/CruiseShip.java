@@ -1,9 +1,9 @@
-package main.domainModel.ships;
+package main.domainmodel.ships;
 
 import main.ColorType;
-import main.domainModel.Person;
+import main.domainmodel.Person;
 import main.Travelable;
-import main.domainModel.Vehicle;
+import main.domainmodel.Vehicle;
 import main.util.Validator;
 
 import java.util.Comparator;

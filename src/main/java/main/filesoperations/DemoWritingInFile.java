@@ -1,12 +1,12 @@
-package main.filesOperations;
+package main.filesoperations;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import main.ColorType;
-import main.domainModel.Vehicle;
-import main.domainModel.cars.InternalCombustionCar;
-import main.domainModel.planes.Airliner;
-import main.domainModel.trains.PassengerTrain;
+import main.domainmodel.Vehicle;
+import main.domainmodel.cars.InternalCombustionCar;
+import main.domainmodel.planes.Airliner;
+import main.domainmodel.trains.PassengerTrain;
 
 import java.beans.XMLEncoder;
 import java.io.BufferedOutputStream;

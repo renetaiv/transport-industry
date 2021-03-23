@@ -1,7 +1,7 @@
-package main.domainModel.planes;
+package main.domainmodel.planes;
 
 import main.ColorType;
-import main.domainModel.Vehicle;
+import main.domainmodel.Vehicle;
 import main.util.Validator;
 
 public class CargoPlane extends Vehicle {

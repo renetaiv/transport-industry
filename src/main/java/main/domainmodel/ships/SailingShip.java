@@ -1,7 +1,7 @@
-package main.domainModel.ships;
+package main.domainmodel.ships;
 
 import main.ColorType;
-import main.domainModel.Vehicle;
+import main.domainmodel.Vehicle;
 import main.util.Validator;
 
 public class SailingShip extends Vehicle {

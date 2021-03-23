@@ -1,15 +1,15 @@
 package main;
 
-import main.domainModel.VehicleParking;
-import main.domainModel.Person;
-import main.domainModel.TransportCompany;
-import main.domainModel.Vehicle;
-import main.domainModel.cars.HybridCar;
-import main.domainModel.cars.InternalCombustionCar;
-import main.domainModel.planes.Airliner;
-import main.domainModel.planes.CargoPlane;
-import main.domainModel.ships.CruiseShip;
-import main.domainModel.trains.PassengerTrain;
+import main.domainmodel.Person;
+import main.domainmodel.TransportCompany;
+import main.domainmodel.Vehicle;
+import main.domainmodel.VehicleParking;
+import main.domainmodel.cars.HybridCar;
+import main.domainmodel.cars.InternalCombustionCar;
+import main.domainmodel.planes.Airliner;
+import main.domainmodel.planes.CargoPlane;
+import main.domainmodel.ships.CruiseShip;
+import main.domainmodel.trains.PassengerTrain;
 
 public class Demo {
 
