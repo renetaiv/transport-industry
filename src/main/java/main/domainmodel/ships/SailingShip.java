@@ -32,6 +32,11 @@ public class SailingShip extends Vehicle {
     }
 
     @Override
+    public int getVehicleMaxParkingCells() {
+        return 50;
+    }
+
+    @Override
     public String toString() {
         return "SailingShip{" +
                 "name='" + super.getName() + '\'' +

@@ -35,6 +35,11 @@ public class InternalCombustionCar extends Vehicle {
     }
 
     @Override
+    public int getVehicleMaxParkingCells() {
+        return 200;
+    }
+
+    @Override
     public String toString() {
         return "InternalCombustionCar{" +
                 "name='" + super.getName() + '\'' +

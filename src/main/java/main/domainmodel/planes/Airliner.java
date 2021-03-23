@@ -48,6 +48,11 @@ public class Airliner extends Vehicle implements Travelable {
     }
 
     @Override
+    public int getVehicleMaxParkingCells() {
+        return 100;
+    }
+
+    @Override
     public String toString() {
         return "Airliner{" +
                 "name='" + super.getName() + '\'' +

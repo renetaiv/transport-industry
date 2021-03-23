@@ -7,11 +7,6 @@ import java.util.Set;
 
 public class VehicleParking {
 
-    private final static int CELLS_FOR_CARS = 200;
-    private final static int CELLS_FOR_PLANES = 100;
-    private final static int CELLS_FOR_TRAINS = 20;
-    private final static int CELLS_FOR_SHIPS = 50;
-
     private Map<String, Set<Vehicle>> parkingCells;
     private Map<Vehicle, Integer> reservedHoursForVehicle;
     private int income;
@@ -31,31 +26,10 @@ public class VehicleParking {
 
     public boolean addVehicleToParking(Vehicle vehicle, int hours) {
         boolean haveFreeCell = false;
-        switch (vehicle.vehicleKind()) {
-            case "Airily":
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_PLANES) {
-                    this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
-                    haveFreeCell = true;
-                }
-                break;
-            case "Marine":
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_SHIPS) {
-                    this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
-                    haveFreeCell = true;
-                }
-                break;
-            case "Railway":
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_TRAINS) {
-                    this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
-                    haveFreeCell = true;
-                }
-                break;
-            default:
-                if (this.parkingCells.get(vehicle.vehicleKind()).size() < CELLS_FOR_CARS) {
-                    this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
-                    haveFreeCell = true;
-                }
-                break;
+
+        if (this.parkingCells.get(vehicle.vehicleKind()).size() < vehicle.getVehicleMaxParkingCells()) {
+            this.parkingCells.get(vehicle.vehicleKind()).add(vehicle);
+            haveFreeCell = true;
         }
 
         if (haveFreeCell) {

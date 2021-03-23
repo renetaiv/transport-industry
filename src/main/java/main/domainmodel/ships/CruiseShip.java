@@ -48,6 +48,11 @@ public class CruiseShip extends Vehicle implements Travelable {
     }
 
     @Override
+    public int getVehicleMaxParkingCells() {
+        return 50;
+    }
+
+    @Override
     public String toString() {
         return "CruiseShip{" +
                 "name='" + super.getName() + '\'' +

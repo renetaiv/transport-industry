@@ -24,6 +24,8 @@ abstract public class Vehicle {
 
     public abstract int getVehiclePricePerHour();
 
+    public abstract int getVehicleMaxParkingCells();
+
     public void displayVehicleKind() {
         System.out.println(this.name + ": " + vehicleKind());
     }

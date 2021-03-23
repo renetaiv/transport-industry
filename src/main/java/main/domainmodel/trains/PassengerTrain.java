@@ -48,6 +48,11 @@ public class PassengerTrain extends Vehicle implements Travelable {
     }
 
     @Override
+    public int getVehicleMaxParkingCells() {
+        return 20;
+    }
+
+    @Override
     public String toString() {
         return "PassengerTrain{" +
                 "name='" + super.getName() + '\'' +
