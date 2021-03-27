@@ -10,6 +10,7 @@ import main.domainmodel.planes.Airliner;
 import main.domainmodel.planes.CargoPlane;
 import main.domainmodel.ships.CruiseShip;
 import main.domainmodel.trains.PassengerTrain;
+import main.util.DBConnector;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
