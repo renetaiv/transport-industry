@@ -1,0 +1,6 @@
+CREATE TABLE vehicle.hybrid_cars (
+    registration_number VARCHAR(10) PRIMARY KEY NOT NULL,
+    model ENUM('LEXUS_ES_300H', 'TOYOTA_RAV4', 'HONDA_NSX', 'LEXUS_RX_450H_L', 'HONDA_JAZZ') NOT NULL,
+    color ENUM('WHITE', 'GREEN', 'BLUE', 'GREY', 'BLACK', 'RED', 'YELLOW', 'PURPLE') NOT NULL,
+    engine ENUM('FULL_HYBRID', 'LIGHT_HYBRID') NOT NULL
+);

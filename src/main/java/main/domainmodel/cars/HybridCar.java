@@ -13,10 +13,12 @@ public class HybridCar extends Vehicle {
         FULL_HYBRID, LIGHT_HYBRID
     }
 
+    private final String registrationNumber;
     private final EngineType engine;
 
-    public HybridCar(HybridCarModelType name, ColorType color, EngineType engine) {
+    public HybridCar(HybridCarModelType name, ColorType color, String registrationNumber, EngineType engine) {
         super(String.valueOf(name), color);
+        this.registrationNumber = registrationNumber;
         this.engine = engine;
     }
 
@@ -48,6 +50,7 @@ public class HybridCar extends Vehicle {
         return "InternalCombustionCar{" +
                 "name='" + super.getName() + '\'' +
                 ", color='" + super.getColor() + '\'' +
+                ", registrationNumber='" + registrationNumber + '\'' +
                 ", engine='" + engine + '\'' +
                 '}';
     }
