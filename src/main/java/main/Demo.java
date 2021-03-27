@@ -11,6 +11,8 @@ import main.domainmodel.planes.CargoPlane;
 import main.domainmodel.ships.CruiseShip;
 import main.domainmodel.trains.PassengerTrain;
 
+import java.sql.Connection;
+
 public class Demo {
 
     public static void main(String[] args) {
@@ -86,5 +88,8 @@ public class Demo {
 
         System.out.println("---- Show the other vehicles in the parking lot ----");
         parking.showVehiclesAtParking();
+
+
+        Connection connection = DBConnector.getInstance().getConnection();
     }
 }
