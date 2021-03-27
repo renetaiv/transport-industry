@@ -91,18 +91,32 @@ public class Demo {
         System.out.println("---- Show the other vehicles in the parking lot ----");
         parking.showVehiclesAtParking();
 
+        Vehicle embraer = new Airliner(Airliner.AirlinerModelType.EMBRAER_LINEAGE_1000E, ColorType.BLUE, 600);
+
         Connection connection = DBConnector.getInstance().getConnection();
         try {
-            String query = " INSERT INTO hybrid_cars(registration_number, model, color, engine)" + " VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO hybrid_cars(registration_number, model, color, engine)" + "VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, ((HybridCar) hybridCar).getRegistrationNumber());
             preparedStatement.setString(2, hybridCar.getName());
             preparedStatement.setString(3, hybridCar.getColor().toString());
             preparedStatement.setString(4, ((HybridCar) hybridCar).getEngine().toString());
             preparedStatement.executeUpdate();
+
+            executeQueryForAirliner(airbus, connection);
+            executeQueryForAirliner(embraer, connection);
+            
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void executeQueryForAirliner(Vehicle airliner, Connection connection) throws SQLException {
+        String query = "INSERT INTO airliners(model, color, max_capacity)" + "VALUES (?, ?, ?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, airliner.getName());
+        preparedStatement.setString(2, airliner.getColor().toString());
+        preparedStatement.setString(3, String.valueOf(((Airliner) airliner).getMaxCapacity()));
     }
 }
