@@ -105,7 +105,7 @@ public class Demo {
 
             executeQueryForAirliner(airbus, connection);
             executeQueryForAirliner(embraer, connection);
-            
+
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -118,5 +118,6 @@ public class Demo {
         preparedStatement.setString(1, airliner.getName());
         preparedStatement.setString(2, airliner.getColor().toString());
         preparedStatement.setString(3, String.valueOf(((Airliner) airliner).getMaxCapacity()));
+        preparedStatement.executeUpdate();
     }
 }
