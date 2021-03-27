@@ -16,7 +16,7 @@ public class DBConnector {
     private DBConnector() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + DB_HOSTNAME + ":" + DB_PORT + "/user",
+            connection = DriverManager.getConnection("jdbc:mysql://" + DB_HOSTNAME + ":" + DB_PORT + "/vehicle",
                     DB_USERNAME, DB_PASSWORD);
         } catch (ClassNotFoundException e) {
             System.out.println("Unable to use MySQL. " + e.getMessage());
