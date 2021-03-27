@@ -30,6 +30,14 @@ public class HybridCar extends Vehicle {
         }
     }
 
+    public String getRegistrationNumber() {
+        return registrationNumber;
+    }
+
+    public EngineType getEngine() {
+        return engine;
+    }
+
     @Override
     public String vehicleKind() {
         return OVERLAND;

@@ -12,6 +12,8 @@ import main.domainmodel.ships.CruiseShip;
 import main.domainmodel.trains.PassengerTrain;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Demo {
 
@@ -90,5 +92,17 @@ public class Demo {
         parking.showVehiclesAtParking();
 
         Connection connection = DBConnector.getInstance().getConnection();
+        try {
+            String query = " INSERT INTO hybrid_cars(registration_number, model, color, engine)" + " VALUES (?, ?, ?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, ((HybridCar) hybridCar).getRegistrationNumber());
+            preparedStatement.setString(2, hybridCar.getName());
+            preparedStatement.setString(3, hybridCar.getColor().toString());
+            preparedStatement.setString(4, ((HybridCar) hybridCar).getEngine().toString());
+            preparedStatement.executeUpdate();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
